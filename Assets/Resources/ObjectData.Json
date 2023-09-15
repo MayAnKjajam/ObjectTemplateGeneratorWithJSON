@@ -1,0 +1,262 @@
+{
+    "Canvas": {
+        "ObjectName": "Canvas",
+        "Position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "Dimension": {
+            "x": 1920,
+            "y": 1080
+        },
+        "Components": [
+            {
+                "ComponentType": "UnityEngine.Canvas"
+            },
+            {
+                "ComponentType": "UnityEngine.CanvasScaler"
+            },
+			{
+                "ComponentType": "UnityEngine.GraphicRayCaster"
+            }
+        ],
+        "Children": [ 
+            {   
+                "ObjectName": "Image",
+                "Position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }, 
+                "Dimension": {
+                    "x": 500,
+                    "y": 300
+                },
+                "Components": [
+                    {
+                        "ComponentType": "UnityEngine.Image",
+                        "Color" : {
+                            "r": 0.5,
+                            "g": 0.5,   
+                            "b": 0.5, 
+                            "a": 1.0
+                        }
+                    }
+                ],
+                "Children":
+                [
+                    {
+                        "ObjectName": "LableImage",
+                        "Position": {
+                            "x": 0.0,
+                            "y": 100,
+                            "z": 0.0
+                        }, 
+                        "Dimension": {
+                            "x": 450,
+                            "y": 50
+                        },
+                        "Components": [
+                            {
+                                "ComponentType": "UnityEngine.Image",
+                                "Color" : {
+                                    "r": 0.0,
+                                    "g": 0.5,   
+                                    "b": 1.0, 
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "Children":
+                        [
+                            {
+                                "ObjectName": "LableText",
+                                "Position": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                }, 
+                                "Dimension": {
+                                    "x": 450,
+                                    "y": 50
+                                },
+                                "Components": [
+                                    {
+                                        "ComponentType": "UnityEngine.Text",
+                                        "Color" : {
+                                            "r": 1.0,
+                                            "g": 1.0,   
+                                            "b": 1.0, 
+                                            "a": 1.0
+                                        },
+                                        "Text" :{ 
+                                            "text":" This is Heading ",
+                                            "fontSize": 20,
+                                            "alignment": "Center"
+                                        }
+                                    }
+                                ],
+                                "Children":
+                                [
+                                ]
+                            }
+                        ]
+                    
+                    },
+					{
+                        "ObjectName": "ContentImage",
+                        "Position": {
+                            "x":-175,
+                            "y": 0.0,
+                            "z": 0.0
+                        }, 
+                        "Dimension": {
+                            "x": 100,
+                            "y": 100
+                        },
+                        "Components": [
+                            {
+                                "ComponentType": "UnityEngine.Image",
+                                "Color" : {
+                                    "r": 1.0,
+                                    "g": 0.2,   
+                                    "b": 0.0, 
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "Children":
+                        [
+                            {
+                                "ObjectName": "ContentText",
+                                "Position": {
+                                    "x": 224.9,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                }, 
+                                "Dimension": {
+                                    "x": 340,
+                                    "y": 100
+                                },
+                                "Components": [
+                                    {
+                                        "ComponentType": "UnityEngine.Text",
+                                        "Color" : {
+                                            "r": 1.0,
+                                            "g": 1.0,   
+                                            "b": 1.0, 
+                                            "a": 1.0
+                                        },
+                                        "Text" :{ 
+                                            "text":" This is Content ",
+                                            "fontSize": 15,
+                                            "alignment": "left"
+                                        }
+                                    }
+                                ],
+                                "Children":
+                                [
+                                ]
+                            }
+                        ]
+                    
+                    },
+                    {
+                        "ObjectName": "LableImageBottom",
+                        "Position": {
+                            "x": 0.0,
+                            "y": -100,
+                            "z": 0.0
+                        }, 
+                        "Dimension": {
+                            "x": 450,
+                            "y": 50
+                        },
+                        "Components": [
+                            {
+                                "ComponentType": "UnityEngine.Image",
+                                "Color" : {
+                                    "r": 0.0,
+                                    "g": 1.0,   
+                                    "b": 1.0, 
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "Children":
+                        [
+                            {
+                                "ObjectName": "OKayButton",
+                                "Position": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                }, 
+                                "Dimension": {
+                                    "x": 100,
+                                    "y": 40
+                                },
+                                "Components": [
+                                    {
+                                        "ComponentType": "UnityEngine.Image",
+                                        "Color" : {
+                                            "r": 1.0,
+                                            "g": 1.0,   
+                                            "b": 1.0, 
+                                            "a": 1.0
+                                        }
+                                    },
+                                    {
+                                        "ComponentType": "UnityEngine.Button",
+                                        "Color" : {
+                                            "r": 1.0,
+                                            "g": 1.0,   
+                                            "b": 1.0, 
+                                            "a": 1.0
+                                        }
+                                    }
+                                ],
+                                "Children":
+                                [   
+                                    {
+                                        "ObjectName": "OKayButtonText",
+                                        "Position": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
+                                        }, 
+                                        "Dimension": {
+                                            "x": 100,
+                                            "y": 40
+                                        },
+                                        "Components": [
+                                            {
+                                                "ComponentType": "UnityEngine.Text",
+                                                "Color" : {
+                                                    "r": 0.0,
+                                                    "g": 0.0,   
+                                                    "b": 0.0, 
+                                                    "a": 1.0
+                                                },
+                                                "Text" :{ 
+                                                    "text":" okay ",
+                                                    "fontSize": 20,
+                                                    "alignment": "Center"
+                                                }
+                                            }
+                                        ],
+                                        "Children":
+                                        [
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    
+                    }
+                ] 
+            }
+        ] 
+    }
+}
