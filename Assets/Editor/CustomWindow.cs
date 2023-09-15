@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using Unity.Plastic.Newtonsoft.Json;
+using Unity.Plastic.Newtonsoft.Json.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -8,6 +11,7 @@ using UnityEngine.UIElements;
 public class CustomWindow : EditorWindow
 {
     private string jsonFileName = "";
+    private string jsonPathtoSavefile = "";
     private string jsonContent = "";
     private Vector2 scrollPosition;
     GameObject emptyObject=null;
@@ -44,6 +48,7 @@ public class CustomWindow : EditorWindow
             GenerateHierarchy();
         }
         EditorGUILayout.EndHorizontal();
+        jsonPathtoSavefile = EditorGUILayout.TextField("save file at path", jsonPathtoSavefile);
     }
 
 
@@ -76,10 +81,47 @@ public class CustomWindow : EditorWindow
         loaderScript.GenrateCanvas(jsonContent);
     }
 
-    private void SaveJSONData()
+    public void SaveJSONData()
     {
-      
+        try
+        {
+            // Attempt to parse the JSON string
+            JObject jsonObject = JObject.Parse(jsonContent);
+            // Validate the JSON data (add your validation logic here)
+            if (IsValidJsonData(jsonObject))
+            {
+                if (!String.IsNullOrEmpty(jsonPathtoSavefile))
+                // Serialize the JSON object and write it to the file
+                {
+                    File.WriteAllText(jsonPathtoSavefile, jsonObject.ToString());
+
+                    Debug.Log("JSON data successfully written to: " + jsonPathtoSavefile);
+                }
+                else
+                {
+                    Debug.LogError("Enter valid path to save file");
+                }
+            }
+            else
+            {
+                Debug.LogError("JSON data is invalid. Please check your data.");
+            }
+        }
+        catch (JsonReaderException jsonEx)
+        {
+            Debug.LogError("Invalid JSON syntax: " + jsonEx.Message);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("An error occurred: " + ex.Message);
+        }
     }
 
+    private bool IsValidJsonData(JObject jsonObject)
+    {
+        // Add your custom JSON validation logic here
+        // For demonstration purposes, we assume the JSON data is valid.
+        return true;
+    }
 }
 
